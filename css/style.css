@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+
+.imagen_perfil{
+    width: 250px;
+    border-radius: 50%;
+  }
+
+.nombre{
+  color: white;
+  margin-top: 10%
+}
+
+.parallax_custom_color{
+  background:#4CAF50;
+}
+
+.imagen_parallax{
+  opacity: 0.8!important;
+}
+
+.elementos_centrados{
+  text-align: center;
+}
+
+.universidad{
+  width: 250px;
+}
+
+.social {
+  font-size: 50px;
+}
