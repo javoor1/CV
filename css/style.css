@@ -12,6 +12,7 @@ main{
 .imagen_perfil{
     width: 250px;
     border-radius: 50%;
+    margin-top: 15%;
   }
 
 .nombre{
@@ -37,4 +38,8 @@ main{
 
 .social {
   font-size: 50px;
+}
+
+#javier {
+  font-size: 22px;
 }

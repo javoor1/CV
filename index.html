@@ -16,27 +16,34 @@
 
 <body>
     <!-- inicio navbar -->
-    <nav>
-        <div class="nav-wrapper">
-            <img src="img/logo.png?style=centerme" class="brand-logo center" alt="logo">
-            <ul id="slide-out" class="sidenav">
-                <li><div class="user-view">
-                <div class="background">
-                    <img src="images/office.jpg">
-                </div>
-                <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-                <a href="#name"><span class="white-text name">John Doe</span></a>
-                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                </div></li>
-                <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-                <li><a href="#!">Second Link</a></li>
-                <li><div class="divider"></div></li>
-                <li><a class="subheader">Subheader</a></li>
-                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-            </ul>
-            <a href="#" data-target="slide-out" class="button-collapse show-on-large sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div> 
-    </nav>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <span class="center" id="javier">Javier Ortiz Arellano.</span>
+                <!-- <img src="img/logo.png?style=centerme" class="brand-logo center" alt="logo"> -->
+                <ul id="slide-out" class="sidenav">
+                    <li><div class="user-view">
+                    <div class="background">
+                        <img src="img/sidebar1.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="img/sidebar.jpg"></a>
+                    <a href="#name"><span class="white-text name">Javier Ortiz Arellano</span></a>
+                    <a href="#email"><span class="white-text email">javoor1@hotmail.com</span></a>
+                    </div></li>
+                    <li><a href="#conoceme"><i class="material-icons">cloud</i>Conóceme</a></li>
+                    <li><a href="#artista"><i class="material-icons">cloud</i>Artista Favorito</a></li>
+                    <li><a href="#musica"><i class="material-icons">cloud</i>Música Favorita</a></li>
+                    <li><a href="#movies"><i class="material-icons">cloud</i>Películas y Series</a></li>
+                    <li><a href="#libros"><i class="material-icons">cloud</i>Libros Favoritos</a></li>
+                    <li><a href="#educacion"><i class="material-icons">cloud</i>Educación</a></li>
+                    <li><a href="#deportes"><i class="material-icons">cloud</i>Deportes</a></li>
+                    <li><a href="#social"><i class="material-icons">cloud</i>Redes Sociales</a></li>
+                </ul>
+                <a href="#" data-target="slide-out" class="button-collapse show-on-large sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div> 
+        </nav>
+    </div>
+    
     <!-- fin navbar -->
 
 
@@ -46,8 +53,10 @@
         <!-- inicio conóceme -->
         <div class="parallax-container">
             <div class="container elementos_centrados">
-              <h1 class="center nombre">Javier Ortiz Arellano.</h1>
-              <img class="imagen_perfil" src="img/conoceme.jpg" alt="">
+              <div class="row">
+                <!-- <h1 class="center nombre">Javier Ortiz Arellano.</h1> -->
+                <img class="imagen_perfil" src="img/conoceme.jpg" alt="">
+              </div>  
             </div>
             <div class="parallax parallax_custom_color"><img class="imagen_parallax"src="img/parallax1.jpg"></div>
         </div>
@@ -78,7 +87,7 @@
         </div>
 
         <div class="container">
-            <h2 class="center"> Artista Favorito </h2>
+            <h2 class="center" id="artista"> Artista Favorito </h2>
             <div class="row">
                 <div class="col m6 center">
                     <img class="materialboxed" width="400" src="img/artista_fav2.gif" alt="">
@@ -107,7 +116,7 @@
             </div>
         </div>
 
-        <h2 class="center">Música Favorita</h2>
+        <h2 class="center" id="musica">Música Favorita</h2>
         <div class="carousel">
             <a class="carousel-item" href="#one!"><img src="img/music1.jpeg"></a>
             <a class="carousel-item" href="#two!"><img src="img/music2.jpg"></a>
@@ -125,7 +134,7 @@
             </div>
         </div>
 
-        <h2 class="center">Películas y Series Favoritas</h2>
+        <h2 class="center" id="movies">Películas y Series Favoritas</h2>
         <div class="carousel">
             <a class="carousel-item" href="#one!"><img src="img/movies1.jpg"></a>
             <a class="carousel-item" href="#two!"><img src="img/movies2.jpg"></a>
@@ -143,7 +152,7 @@
             </div>
         </div>
 
-        <h2 class="center">Libros Favoritos</h2>
+        <h2 class="center" id="libros">Libros Favoritos</h2>
         <div class="carousel">
             <a class="carousel-item" href="#one!"><img src="img/libros1.jpg"></a>
             <a class="carousel-item" href="#two!"><img src="img/libros2.jpg"></a>
@@ -163,6 +172,7 @@
             </div>
         </div>
 
+        <h2 class="center" id="educacion">Educación</h2>
         <div class="container">
             <div class="row">
                 <div class="col s12">
@@ -213,7 +223,7 @@
             <div class="parallax parallax_custom_color"><img class="imagen_parallax"src="img/deportes.gif"></div>
         </div>
 
-        <h2 class="center">Deportes Favoritos</h2>
+        <h2 class="center" id="deportes">Deportes Favoritos</h2>
         <div class="container">
             <h3 class="center"> Futbol </h3>
             <p class="center">Pumas UNAM</p>
@@ -304,6 +314,23 @@
             $('.materialboxed').materialbox();
             $('.carousel').carousel();
             $('.tabs').tabs();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $('#slide-out li a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+                }
+            }
+            });
         });
     </script>
     
